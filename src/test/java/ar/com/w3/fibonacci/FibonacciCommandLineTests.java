@@ -1,8 +1,15 @@
 package ar.com.w3.fibonacci;
 
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.FileWritter;
+import ar.com.w3.fibonacci.runner.ContextoEjecucion;
 import ar.com.w3.fibonacci.runner.FibonacciCommandLineExecuter;
-import org.junit.Test;;
+import org.junit.Test;
+import org.mockito.ArgumentMatchers;
+import org.mockito.MockedStatic;
+import org.mockito.Mockito;;
+
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class FibonacciCommandLineTests {
 
@@ -123,6 +130,28 @@ public class FibonacciCommandLineTests {
 
         assertEquals("2 1 1 0",commandLineExecuter.execute(args));
     }
+
+    @Test
+    //java -jar fibo.jar  -v=hi 4
+    public void seInvocaALaLineaDeComandoConLaOpcionGuardarEnUnArchivo(){
+
+        FibonacciCommandLineExecuter commandLineExecuter= new FibonacciCommandLineExecuter();
+        FileWritter fileWriterMock = mock(FileWritter.class);
+        try (MockedStatic<FileWritter> utilities = Mockito.mockStatic(FileWritter.class)) {
+            utilities.when(FileWritter::getInstance).thenReturn(fileWriterMock);
+
+            String rutaArchio= "/resultado.txt";
+            String[] args = {"-o=hi", "-m=l","-f="+rutaArchio, "4"};
+
+            assertEquals(rutaArchio,commandLineExecuter.execute(args));
+
+            verify(fileWriterMock, times(1)).crearArchivo(ArgumentMatchers.isA(ContextoEjecucion.class),ArgumentMatchers.eq(rutaArchio));
+        }
+
+
+    }
+
+
 
 
 }

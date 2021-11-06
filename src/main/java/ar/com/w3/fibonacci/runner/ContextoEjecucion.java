@@ -1,7 +1,10 @@
 package ar.com.w3.fibonacci.runner;
 
 import ar.com.w3.fibonacci.parametros.tipos.Parametro;
+import ar.com.w3.fibonacci.parametros.tipos.ParametroTipoImpresion;
 import ar.com.w3.fibonacci.parametros.tipos.TipoParametro;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionEnArchivo;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionPorConsola;
 
 import java.util.List;
 import java.util.Map;
@@ -31,9 +34,6 @@ public class ContextoEjecucion {
         return cantidadNumeros;
     }
 
-    public void setCantidadNumeros(Integer cantidadNumeros) {
-        this.cantidadNumeros = cantidadNumeros;
-    }
 
     public Map<TipoParametro, Parametro> getParametros() {
         return parametros;
@@ -49,5 +49,15 @@ public class ContextoEjecucion {
 
     public void setParametros(Map<TipoParametro, Parametro> parametros) {
         this.parametros = parametros;
+    }
+
+    public String getResultadoPorConsola(EstrategiaImpresionEnArchivo requester){
+
+        return requester.getParamertro().getNombreArchivo();
+    }
+
+    public String getResultadoPorConsola(EstrategiaImpresionPorConsola requester){
+
+        return resultadoFinal;
     }
 }
