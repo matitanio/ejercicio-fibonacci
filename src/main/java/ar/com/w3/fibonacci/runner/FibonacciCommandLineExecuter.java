@@ -31,8 +31,7 @@ public class FibonacciCommandLineExecuter {
         ContextoEjecucion contextoEjecucion = new ContextoEjecucion(cantidadNumeros, parametros);
 
         return contextoEjecucion
-                .getParametros()
-                .getOrDefault(TipoParametro.TIPO_CALCULO,Parametro.obtenerDefault(TipoParametro.TIPO_CALCULO))
+                .obtenerParametro(TipoParametro.TIPO_CALCULO)
                 .ejecutar(contextoEjecucion);
 
     }

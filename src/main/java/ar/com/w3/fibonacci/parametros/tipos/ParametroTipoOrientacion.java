@@ -34,10 +34,9 @@ public class ParametroTipoOrientacion extends Parametro {
 
         contextoEjecucion.setResultadoFinal(resultado);
 
-        TipoParametro tipoParametroSiguiente = TipoParametro.TIPO_IMPRESION;
         Parametro siguiente =  contextoEjecucion
-                .getParametros()
-                .getOrDefault(tipoParametroSiguiente, Parametro.obtenerDefault(tipoParametroSiguiente));
+                .obtenerParametro(TipoParametro.TIPO_IMPRESION);
+
 
         return siguiente
                 .ejecutar(contextoEjecucion);

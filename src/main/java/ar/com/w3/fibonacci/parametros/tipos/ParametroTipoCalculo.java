@@ -22,8 +22,7 @@ public class ParametroTipoCalculo extends Parametro {
 
         contextoEjecucion.setResultadoParcial(serie);
         Parametro siguiente =  contextoEjecucion
-                .getParametros()
-                .getOrDefault(tipoParametroSiguiente, Parametro.obtenerDefault(tipoParametroSiguiente));
+                .obtenerParametro(tipoParametroSiguiente);
 
         return siguiente.ejecutar(contextoEjecucion);
     }

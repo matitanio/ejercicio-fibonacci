@@ -60,4 +60,10 @@ public class ContextoEjecucion {
 
         return resultadoFinal;
     }
+
+    public Parametro obtenerParametro(TipoParametro tipoParametro){
+
+        return this.
+                parametros.getOrDefault(tipoParametro,Parametro.obtenerDefault(tipoParametro));
+    }
 }
