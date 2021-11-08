@@ -1,15 +1,6 @@
-package ar.com.w3.fibonacci.parametros.tipos.estrategias.output;
+package ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion;
 
-import ar.com.w3.fibonacci.parametros.ParametrosInvalidos;
-import ar.com.w3.fibonacci.parametros.tipos.ParametroTipoImpresion;
-import ar.com.w3.fibonacci.parametros.tipos.TipoParametro;
 import ar.com.w3.fibonacci.runner.ContextoEjecucion;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 
 public class EstrategiaImpresionEnArchivo extends EstrategiaImpresion {
 

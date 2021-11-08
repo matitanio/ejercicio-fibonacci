@@ -3,7 +3,7 @@ package ar.com.w3.fibonacci.paremtros;
 import ar.com.w3.fibonacci.parametros.tipos.Parametro;
 import ar.com.w3.fibonacci.parametros.tipos.ParametroTipoImpresion;
 import ar.com.w3.fibonacci.parametros.tipos.TipoParametro;
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionEnArchivo;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.EstrategiaImpresionEnArchivo;
 import ar.com.w3.fibonacci.runner.ContextoEjecucion;
 import org.junit.Before;
 import org.junit.Test;

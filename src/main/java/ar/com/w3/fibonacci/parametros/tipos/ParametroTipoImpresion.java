@@ -1,7 +1,7 @@
 package ar.com.w3.fibonacci.parametros.tipos;
 
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresion;
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionPorConsola;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.EstrategiaImpresion;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.EstrategiaImpresionPorConsola;
 import ar.com.w3.fibonacci.runner.ContextoEjecucion;
 
 public class ParametroTipoImpresion extends Parametro {

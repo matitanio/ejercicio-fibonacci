@@ -1,14 +1,12 @@
 package ar.com.w3.fibonacci.runner;
 
 import ar.com.w3.fibonacci.parametros.tipos.Parametro;
-import ar.com.w3.fibonacci.parametros.tipos.ParametroTipoImpresion;
 import ar.com.w3.fibonacci.parametros.tipos.TipoParametro;
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionEnArchivo;
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.EstrategiaImpresionPorConsola;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.EstrategiaImpresionEnArchivo;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.EstrategiaImpresionPorConsola;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class ContextoEjecucion {
 

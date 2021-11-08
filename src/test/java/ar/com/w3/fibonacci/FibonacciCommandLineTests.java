@@ -1,6 +1,6 @@
 package ar.com.w3.fibonacci;
 
-import ar.com.w3.fibonacci.parametros.tipos.estrategias.output.FileWritter;
+import ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion.FileWritter;
 import ar.com.w3.fibonacci.runner.ContextoEjecucion;
 import ar.com.w3.fibonacci.runner.FibonacciCommandLineExecuter;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package ar.com.w3.fibonacci.parametros.tipos.estrategias.output;
+package ar.com.w3.fibonacci.parametros.tipos.estrategias.impresion;
 
 import ar.com.w3.fibonacci.parametros.ParametrosInvalidos;
 import ar.com.w3.fibonacci.runner.ContextoEjecucion;
